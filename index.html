@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Soluciones en energías limpias para un futuro sostenible. Ofrecemos instalación de paneles solares, energía eólica y más.">
+  <title>Soluciones Energéticas Limpias</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Detectar si el usuario llega desde un dispositivo móvil
+    function isMobile() {
+      return window.innerWidth <= 800;
+    }
+
+    // Verificar si el visitante viene de un anuncio de Google Ads
+    function checkGoogleAds() {
+      const params = new URLSearchParams(window.location.search);
+      return params.has('gclid'); // 'gclid' es un parámetro usado por Google Ads para rastrear clics
+    }
+
+    // Mostrar el botón solo si es móvil y el tráfico proviene de un anuncio de Google Ads
+    window.onload = function() {
+      if (isMobile() && checkGoogleAds()) {
+        document.getElementById('cta-button').style.display = 'block';
+      } else {
+        document.getElementById('cta-button').style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Impulsa tu futuro con energías limpias</h1>
+      <p>Ofrecemos soluciones de energía renovable para hogares y empresas. Únete a la revolución verde hoy.</p>
+    </header>
+
+    <section>
+      <h2>¿Por qué elegir energías limpias?</h2>
+      <ul>
+        <li><strong>Paneles solares</strong> que aprovechan la energía del sol para tu hogar o negocio.</li>
+        <li><strong>Energía eólica</strong> para aprovechar la fuerza del viento y generar electricidad.</li>
+        <li><strong>Eficiencia energética</strong> con tecnología avanzada para reducir tu consumo de energía.</li>
+      </ul>
+    </section>
+
+    <!-- Botón de llamada a la acción solo visible en móvil y si el tráfico es de Google Ads -->
+    <div id="cta-button-container">
+      <a href="index.html" id="cta-button" class="cta-button">¡Descubre más y comienza hoy!</a>
+    </div>
+
+    <footer>
+      <p>© 2026 Energías Limpias. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
